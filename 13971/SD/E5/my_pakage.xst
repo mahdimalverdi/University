@@ -1,0 +1,5 @@
+set -tmpdir "D:/University/13971/SD/E5/xst/projnav.tmp"
+set -xsthdpdir "D:/University/13971/SD/E5/xst"
+elaborate
+-ifn my_pakage.prj
+-ifmt mixed

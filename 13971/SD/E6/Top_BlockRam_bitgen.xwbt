@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\University\13971\SD\E6\Top_BlockRam.ncd
+OUTFILE=D:\University\13971\SD\E6\Top_BlockRam.bit
+FAMILY=Spartan-3A DSP
+PART=xc3sd1800a-4fg676
+WORKINGDIR=D:\University\13971\SD\E6
+LICENSE=WebPack
+USER_INFO=__0_0_0

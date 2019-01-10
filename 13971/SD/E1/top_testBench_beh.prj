@@ -1,0 +1,2 @@
+vhdl work "Top.vhd"
+vhdl work "top_testBench.vhd"

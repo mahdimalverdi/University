@@ -1,0 +1,12 @@
+V3 6
+FL D:/University/13971/SD/E5/MY_abs.vhd 2018/12/10.17:26:55 P.20131013
+EN work/MY_abs 1544452754 FL D:/University/13971/SD/E5/MY_abs.vhd \
+      PB ieee/std_logic_1164 1381692176 PB work/my_pakage 1544452753
+AR work/MY_abs/Behavioral 1544452755 \
+      FL D:/University/13971/SD/E5/MY_abs.vhd EN work/MY_abs 1544452754
+FL D:/University/13971/SD/E5/my_pakage.vhd 2018/12/10.18:09:10 P.20131013
+PH work/my_pakage 1544452752 FL D:/University/13971/SD/E5/my_pakage.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179 PB ieee/NUMERIC_STD 1381692181
+PB work/my_pakage 1544452753 \
+      FL D:/University/13971/SD/E5/my_pakage.vhd PH work/my_pakage 1544452752

@@ -1,0 +1,9 @@
+Running: D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o D:/University/13971/SD/E5/MY_abs_isim_beh.exe -prj D:/University/13971/SD/E5/MY_abs_beh.prj work.MY_abs 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "D:/University/13971/SD/E5/my_pakage.vhd" into library work
+ERROR:HDLCompiler:1731 - "D:/University/13971/SD/E5/my_pakage.vhd" Line 41: found '0' definitions of operator "not", cannot determine exact overloaded matching definition for "not"
+ERROR:HDLCompiler:854 - "D:/University/13971/SD/E5/my_pakage.vhd" Line 28: Unit <my_pakage> ignored due to previous errors.
+VHDL file D:/University/13971/SD/E5/my_pakage.vhd ignored due to errors

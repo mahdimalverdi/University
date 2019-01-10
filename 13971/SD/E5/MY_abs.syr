@@ -1,0 +1,529 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: MY_abs.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "MY_abs.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "MY_abs"
+Output Format                      : NGC
+Target Device                      : xc3sd1800a-4-fg676
+
+---- Source Options
+Top Module Name                    : MY_abs
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/University/13971/SD/E5/my_pakage.vhd" in Library work.
+Package <my_pakage> compiled.
+Package body <my_pakage> compiled.
+Compiling vhdl file "D:/University/13971/SD/E5/MY_abs.vhd" in Library work.
+Entity <my_abs> compiled.
+WARNING:HDLParsers:1406 - "D:/University/13971/SD/E5/MY_abs.vhd" Line 42. No sensitivity list and no wait in the process
+Entity <my_abs> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <MY_abs> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <MY_abs> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "D:/University/13971/SD/E5/MY_abs.vhd" line 42: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <A>
+Entity <MY_abs> analyzed. Unit <MY_abs> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <MY_abs>.
+    Related source file is "D:/University/13971/SD/E5/MY_abs.vhd".
+    Found 32-bit adder for signal <A_int$add0000> created at line 34.
+    Found 32-bit comparator less for signal <A_int$cmp_lt0000> created at line 45.
+    Found 32-bit addsub for signal <A_int$share0000> created at line 45.
+    Found 32-bit adder for signal <num$add0000>.
+    Found 32-bit adder for signal <num$add0001>.
+    Found 32-bit adder for signal <num$add0002>.
+    Found 32-bit adder for signal <num$add0003>.
+    Found 32-bit adder for signal <num$add0004>.
+    Found 32-bit adder for signal <num$add0005>.
+    Found 32-bit adder for signal <num$add0006>.
+    Found 32-bit adder for signal <num$addsub0000> created at line 51.
+    Found 32-bit adder for signal <num$addsub0001>.
+    Found 32-bit adder for signal <num$addsub0002>.
+    Found 32-bit adder for signal <num$addsub0003>.
+    Found 32-bit adder for signal <num$addsub0004>.
+    Found 32-bit adder for signal <num$addsub0005>.
+    Found 32-bit adder for signal <num$addsub0006>.
+    Found 32-bit adder for signal <num$addsub0007>.
+    Found 32-bit comparator greater for signal <num$cmp_gt0000> created at line 50.
+    Found 32-bit adder for signal <result$addsub0000> created at line 34.
+    Found 32-bit adder for signal <result$addsub0001> created at line 34.
+    Found 32-bit adder for signal <result$addsub0002> created at line 34.
+    Found 32-bit adder for signal <result$addsub0003> created at line 34.
+    Found 32-bit adder for signal <result$addsub0004> created at line 34.
+    Found 32-bit adder for signal <result$addsub0005> created at line 34.
+    Summary:
+	inferred  23 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <MY_abs> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 23
+ 32-bit adder                                          : 22
+ 32-bit addsub                                         : 1
+# Comparators                                          : 2
+ 32-bit comparator greater                             : 1
+ 32-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 23
+ 1-bit adder                                           : 1
+ 2-bit adder                                           : 1
+ 29-bit adder                                          : 4
+ 30-bit adder                                          : 1
+ 31-bit adder                                          : 1
+ 32-bit adder                                          : 14
+ 32-bit addsub                                         : 1
+# Comparators                                          : 2
+ 32-bit comparator greater                             : 1
+ 32-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2170 - Unit MY_abs : the following signal(s) form a combinatorial loop: Maddsub_A_int_share0000_cy<4>, A_int<0>, Mcompar_num_cmp_gt0000_cy<5>, num_mux0005<31>, Maddsub_A_int_share0000_cy<18>, Maddsub_A_int_share0000_cy<9>, num_mux0002<31>, Mcompar_num_cmp_gt0000_cy<4>, num_mux0001<31>, Maddsub_A_int_share0000_cy<21>, Mcompar_num_cmp_gt0000_lut<0>, num_mux0003<31>, Maddsub_A_int_share0000_cy<15>, Maddsub_A_int_share0000_cy<26>, Maddsub_A_int_share0000_cy<25>, Maddsub_A_int_share0000_cy<19>, Maddsub_A_int_share0000_cy<7>, Mcompar_num_cmp_gt0000_cy<8>, Mcompar_num_cmp_gt0000_cy<2>, Maddsub_A_int_share0000_cy<1>, Maddsub_A_int_share0000_cy<0>, Maddsub_A_int_share0000_cy<29>, num_cmp_gt0000, Mcompar_num_cmp_gt0000_cy<0>, Maddsub_A_int_share0000_cy<5>, Maddsub_A_int_share0000_cy<14>, A_int_share0000<31>, Maddsub_A_int_share0000_cy<23>, num_mux0004<31>, A_int_mux0000<0>, Maddsub_A_int_share0000_cy<20>, Maddsub_A_int_share0000_cy<16>, num_mux0000<31>, Maddsub_A_int_share0000_cy<2>, Maddsub_A_int_share0000_cy<30>, Maddsub_A_int_share0000_cy<24>, Maddsub_A_int_share0000_cy<17>, Maddsub_A_int_share0000_cy<22>, Maddsub_A_int_share0000_cy<28>, Maddsub_A_int_share0000_cy<13>, A_int<31>, Mcompar_num_cmp_gt0000_cy<6>, Maddsub_A_int_share0000_cy<27>, Maddsub_A_int_share0000_cy<8>, Mcompar_num_cmp_gt0000_cy<7>, Maddsub_A_int_share0000_cy<6>, Maddsub_A_int_share0000_cy<3>, Maddsub_A_int_share0000_cy<11>, Mcompar_num_cmp_gt0000_cy<1>, Maddsub_A_int_share0000_cy<10>, Abs_A<7>, Mcompar_num_cmp_gt0000_cy<3>, Maddsub_A_int_share0000_cy<12>.
+WARNING:Xst:2170 - Unit MY_abs : the following signal(s) form a combinatorial loop: num_add0005<1>, Madd_num_not0004<0>, num_add0002<1>, num_addsub0004<0>, Madd_num_addsub0004_lut<0>, Madd_num_add0005_cy<0>, Abs_A<2>, num_not0010<0>, Maddsub_A_int_share0000_lut<1>, num_add0003<1>, Abs_A<6>, Madd_num_addsub0006_lut<0>, Madd_num_not0000<1>, Madd_num_not0002<0>, num_not0012<0>, Madd_num_not0003<0>, num_addsub0002<0>, Madd_num_not0005<0>, num_not0011<0>, num_addsub0006<0>, Madd_num_add0004_cy<0>, num_add0000<1>, Madd_num_not0001<0>, Madd_num_addsub0002_lut<0>, A_int_mux0000<1>, Madd_num_add0001_lut<0>, Madd_num_add0003_lut<0>, num_addsub0003<0>, Madd_num_add0002_cy<0>, num_mux0000<1>, Madd_num_addsub0001_lut<0>, num_add0004<1>, A_int<1>, num_add0001<1>, Madd_num_add0001_cy<0>, num_not0007<0>, Madd_num_add0003_cy<0>, num_addsub0001<0>, Madd_num_addsub0005_lut<0>, Abs_A<3>, Madd_num_add0002_lut<0>, A_int_share0000<1>, Abs_A<1>, Madd_num_add0004_lut<0>, num_not0008<0>, num_not0009<0>, Abs_A<4>, Abs_A<5>, Madd_num_addsub0003_lut<0>, Madd_num_add0005_lut<0>, num_addsub0005<0>.
+WARNING:Xst:2170 - Unit MY_abs : the following signal(s) form a combinatorial loop: A_int<31>.
+
+Optimizing unit <MY_abs> ...
+
+Mapping all equations...
+WARNING:Xst:2170 - Unit MY_abs : the following signal(s) form a combinatorial loop: num_not0011<1>, Madd_num_addsub0005_cy<19>, Madd_num_addsub0005_cy<20>, Madd_num_not0004<1>, Madd_num_addsub0005_cy<24>, Madd_num_addsub0005_cy<21>, Madd_num_addsub0005_cy<15>, N56, A_int_share0000<5>, Madd_num_addsub0005_cy<3>, Madd_num_addsub0005_cy<9>, N112, Madd_num_addsub0005_cy<8>, Madd_num_addsub0005_cy<29>, Madd_num_addsub0005_cy<28>, Madd_num_addsub0005_cy<14>, Madd_num_addsub0005_cy<18>, Madd_num_addsub0005_cy<17>, A_int<5>, Maddsub_A_int_share0000_lut<5>, num_mux0007<0>27, Madd_num_addsub0005_cy<4>, Madd_num_addsub0005_cy<11>, Madd_num_addsub0005_cy<30>, num_addsub0005<31>, A_int_mux0000<5>, Madd_num_addsub0005_cy<26>, Abs_A<7>, Madd_num_addsub0005_cy<16>, Madd_num_addsub0005_cy<23>, Madd_num_addsub0005_cy<25>, Madd_num_add0004_cy<1>, Madd_num_addsub0005_cy<12>, Madd_num_addsub0005_cy<2>, Madd_num_addsub0005_cy<7>, num_add0004<2>, num_mux0002<3>, Madd_num_addsub0005_cy<22>, Madd_num_addsub0005_cy<13>, Madd_num_addsub0005_cy<5>, Madd_num_addsub0005_cy<10>, Madd_num_addsub0005_cy<1>, Madd_num_addsub0005_cy<6>, Madd_num_addsub0005_cy<27>.
+WARNING:Xst:2170 - Unit MY_abs : the following signal(s) form a combinatorial loop: A_int_mux0000<2>, Madd_num_not0001<1>, Madd_num_add0001_cy<1>, A_int<2>, num_not0008<1>, num_add0001<2>, Madd_num_addsub0002_cy<3>, Abs_A<6>, num_mux0003<3>1, A_int_share0000<2>, num_mux0003<3>, num_mux0006<0>27, Madd_num_addsub0002_cy<1>, Madd_num_addsub0002_cy<2>, Maddsub_A_int_share0000_lut<2>, num_addsub0002<4>.
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block MY_abs, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : MY_abs.ngr
+Top Level Output File Name         : MY_abs
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 16
+
+Cell Usage :
+# BELS                             : 1545
+#      GND                         : 1
+#      INV                         : 207
+#      LUT2                        : 105
+#      LUT3                        : 99
+#      LUT4                        : 286
+#      MUXCY                       : 435
+#      MUXF5                       : 6
+#      VCC                         : 1
+#      XORCY                       : 405
+# IO Buffers                       : 16
+#      IBUF                        : 8
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3sd1800afg676-4 
+
+ Number of Slices:                      379  out of  16640     2%  
+ Number of 4 input LUTs:                697  out of  33280     2%  
+ Number of IOs:                          16
+ Number of bonded IOBs:                  16  out of    519     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 163.872ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 20241671782448847000000 / 8
+-------------------------------------------------------------------------
+Delay:               163.872ns (Levels of Logic = 183)
+  Source:            A<0> (PAD)
+  Destination:       Abs_A<7> (PAD)
+
+  Data Path: A<0> to Abs_A<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.849   0.527  A_0_IBUF (A_0_IBUF)
+     LUT3:I1->O            1   0.643   0.420  A_int_mux0000<0>1 (A_int_mux0000<0>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<0> (Maddsub_A_int_share0000_cy<0>)
+     XORCY:CI->O           2   0.844   0.479  Maddsub_A_int_share0000_xor<1> (A_int_share0000<1>)
+     LUT3:I2->O            1   0.648   0.420  A_int_mux0000<1>1 (A_int_mux0000<1>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<1> (Maddsub_A_int_share0000_cy<1>)
+     XORCY:CI->O           3   0.844   0.563  Maddsub_A_int_share0000_xor<2> (A_int_share0000<2>)
+     LUT3:I2->O            1   0.648   0.420  A_int_mux0000<2>1 (A_int_mux0000<2>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<2> (Maddsub_A_int_share0000_cy<2>)
+     XORCY:CI->O           3   0.844   0.563  Maddsub_A_int_share0000_xor<3> (A_int_share0000<3>)
+     LUT3:I2->O            1   0.648   0.420  A_int_mux0000<3>1 (A_int_mux0000<3>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<3> (Maddsub_A_int_share0000_cy<3>)
+     XORCY:CI->O           3   0.844   0.563  Maddsub_A_int_share0000_xor<4> (A_int_share0000<4>)
+     LUT3:I2->O            1   0.648   0.420  A_int_mux0000<4>1 (A_int_mux0000<4>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<4> (Maddsub_A_int_share0000_cy<4>)
+     XORCY:CI->O           3   0.844   0.563  Maddsub_A_int_share0000_xor<5> (A_int_share0000<5>)
+     LUT3:I2->O            1   0.648   0.420  A_int_mux0000<5>1 (A_int_mux0000<5>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<5> (Maddsub_A_int_share0000_cy<5>)
+     XORCY:CI->O           3   0.844   0.563  Maddsub_A_int_share0000_xor<6> (A_int_share0000<6>)
+     LUT3:I2->O            1   0.648   0.420  A_int_mux0000<6>1 (A_int_mux0000<6>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<6> (Maddsub_A_int_share0000_cy<6>)
+     XORCY:CI->O           5   0.844   0.665  Maddsub_A_int_share0000_xor<7> (A_int_share0000<7>)
+     LUT3:I2->O            1   0.648   0.420  A_int_mux0000<7>1 (A_int_mux0000<7>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<7> (Maddsub_A_int_share0000_cy<7>)
+     XORCY:CI->O           5   0.844   0.713  Maddsub_A_int_share0000_xor<8> (A_int_share0000<8>)
+     LUT2:I1->O            1   0.643   0.000  A_int_mux0000<8>1 (A_int_mux0000<8>)
+     MUXCY:S->O            1   0.632   0.000  Maddsub_A_int_share0000_cy<8> (Maddsub_A_int_share0000_cy<8>)
+     XORCY:CI->O           5   0.844   0.713  Maddsub_A_int_share0000_xor<9> (A_int_share0000<9>)
+     LUT2:I1->O            1   0.643   0.420  A_int_mux0000<9>1 (A_int_mux0000<9>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<9> (Maddsub_A_int_share0000_cy<9>)
+     XORCY:CI->O           5   0.844   0.713  Maddsub_A_int_share0000_xor<10> (A_int_share0000<10>)
+     LUT2:I1->O            1   0.643   0.420  A_int_mux0000<10>1 (A_int_mux0000<10>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<10> (Maddsub_A_int_share0000_cy<10>)
+     XORCY:CI->O           5   0.844   0.713  Maddsub_A_int_share0000_xor<11> (A_int_share0000<11>)
+     LUT2:I1->O            1   0.643   0.420  A_int_mux0000<11>1 (A_int_mux0000<11>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<11> (Maddsub_A_int_share0000_cy<11>)
+     XORCY:CI->O           5   0.844   0.713  Maddsub_A_int_share0000_xor<12> (A_int_share0000<12>)
+     LUT2:I1->O            1   0.643   0.420  A_int_mux0000<12>1 (A_int_mux0000<12>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<12> (Maddsub_A_int_share0000_cy<12>)
+     XORCY:CI->O           5   0.844   0.713  Maddsub_A_int_share0000_xor<13> (A_int_share0000<13>)
+     LUT2:I1->O            1   0.643   0.420  A_int_mux0000<13>1 (A_int_mux0000<13>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<13> (Maddsub_A_int_share0000_cy<13>)
+     XORCY:CI->O           5   0.844   0.713  Maddsub_A_int_share0000_xor<14> (A_int_share0000<14>)
+     LUT2:I1->O            1   0.643   0.420  A_int_mux0000<14>1 (A_int_mux0000<14>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<14> (Maddsub_A_int_share0000_cy<14>)
+     XORCY:CI->O           5   0.844   0.713  Maddsub_A_int_share0000_xor<15> (A_int_share0000<15>)
+     LUT2:I1->O            1   0.643   0.420  A_int_mux0000<15>1 (A_int_mux0000<15>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<15> (Maddsub_A_int_share0000_cy<15>)
+     XORCY:CI->O           5   0.844   0.713  Maddsub_A_int_share0000_xor<16> (A_int_share0000<16>)
+     LUT2:I1->O            1   0.643   0.420  A_int_mux0000<16>1 (A_int_mux0000<16>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<16> (Maddsub_A_int_share0000_cy<16>)
+     XORCY:CI->O           5   0.844   0.713  Maddsub_A_int_share0000_xor<17> (A_int_share0000<17>)
+     LUT2:I1->O            1   0.643   0.420  A_int_mux0000<17>1 (A_int_mux0000<17>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<17> (Maddsub_A_int_share0000_cy<17>)
+     XORCY:CI->O           5   0.844   0.713  Maddsub_A_int_share0000_xor<18> (A_int_share0000<18>)
+     LUT2:I1->O            1   0.643   0.420  A_int_mux0000<18>1 (A_int_mux0000<18>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<18> (Maddsub_A_int_share0000_cy<18>)
+     XORCY:CI->O           5   0.844   0.713  Maddsub_A_int_share0000_xor<19> (A_int_share0000<19>)
+     LUT2:I1->O            1   0.643   0.420  A_int_mux0000<19>1 (A_int_mux0000<19>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<19> (Maddsub_A_int_share0000_cy<19>)
+     XORCY:CI->O           5   0.844   0.713  Maddsub_A_int_share0000_xor<20> (A_int_share0000<20>)
+     LUT2:I1->O            1   0.643   0.420  A_int_mux0000<20>1 (A_int_mux0000<20>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<20> (Maddsub_A_int_share0000_cy<20>)
+     XORCY:CI->O           5   0.844   0.713  Maddsub_A_int_share0000_xor<21> (A_int_share0000<21>)
+     LUT2:I1->O            1   0.643   0.420  A_int_mux0000<21>1 (A_int_mux0000<21>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<21> (Maddsub_A_int_share0000_cy<21>)
+     XORCY:CI->O           5   0.844   0.713  Maddsub_A_int_share0000_xor<22> (A_int_share0000<22>)
+     LUT2:I1->O            1   0.643   0.420  A_int_mux0000<22>1 (A_int_mux0000<22>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<22> (Maddsub_A_int_share0000_cy<22>)
+     XORCY:CI->O           5   0.844   0.713  Maddsub_A_int_share0000_xor<23> (A_int_share0000<23>)
+     LUT2:I1->O            1   0.643   0.420  A_int_mux0000<23>1 (A_int_mux0000<23>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<23> (Maddsub_A_int_share0000_cy<23>)
+     XORCY:CI->O           5   0.844   0.713  Maddsub_A_int_share0000_xor<24> (A_int_share0000<24>)
+     LUT2:I1->O            1   0.643   0.420  A_int_mux0000<24>1 (A_int_mux0000<24>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<24> (Maddsub_A_int_share0000_cy<24>)
+     XORCY:CI->O           5   0.844   0.713  Maddsub_A_int_share0000_xor<25> (A_int_share0000<25>)
+     LUT2:I1->O            1   0.643   0.420  A_int_mux0000<25>1 (A_int_mux0000<25>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<25> (Maddsub_A_int_share0000_cy<25>)
+     XORCY:CI->O           5   0.844   0.713  Maddsub_A_int_share0000_xor<26> (A_int_share0000<26>)
+     LUT2:I1->O            1   0.643   0.420  A_int_mux0000<26>1 (A_int_mux0000<26>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<26> (Maddsub_A_int_share0000_cy<26>)
+     XORCY:CI->O           5   0.844   0.713  Maddsub_A_int_share0000_xor<27> (A_int_share0000<27>)
+     LUT2:I1->O            1   0.643   0.420  A_int_mux0000<27>1 (A_int_mux0000<27>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<27> (Maddsub_A_int_share0000_cy<27>)
+     XORCY:CI->O           6   0.844   0.749  Maddsub_A_int_share0000_xor<28> (A_int_share0000<28>)
+     LUT2:I1->O            1   0.643   0.420  A_int_mux0000<28>1 (A_int_mux0000<28>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<28> (Maddsub_A_int_share0000_cy<28>)
+     XORCY:CI->O           6   0.844   0.749  Maddsub_A_int_share0000_xor<29> (A_int_share0000<29>)
+     LUT2:I1->O            1   0.643   0.420  A_int_mux0000<29>1 (A_int_mux0000<29>)
+     MUXCY:DI->O           1   0.787   0.000  Maddsub_A_int_share0000_cy<29> (Maddsub_A_int_share0000_cy<29>)
+     XORCY:CI->O           6   0.844   0.749  Maddsub_A_int_share0000_xor<30> (A_int_share0000<30>)
+     LUT2:I1->O            1   0.643   0.420  A_int_mux0000<30>1 (A_int_mux0000<30>)
+     MUXCY:DI->O           0   0.787   0.000  Maddsub_A_int_share0000_cy<30> (Maddsub_A_int_share0000_cy<30>)
+     XORCY:CI->O           2   0.844   0.590  Maddsub_A_int_share0000_xor<31> (A_int_share0000<31>)
+     LUT2:I0->O           64   0.648   1.352  A_int<31>1 (A_int<31>)
+     LUT2:I1->O          111   0.643   1.430  A_int<0>11 (N01)
+     LUT3:I0->O            3   0.648   0.674  A_int<0>1 (A_int<0>)
+     LUT4:I0->O            1   0.648   0.000  Mcompar_num_cmp_gt0000_lut<0> (Mcompar_num_cmp_gt0000_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  Mcompar_num_cmp_gt0000_cy<0> (Mcompar_num_cmp_gt0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_num_cmp_gt0000_cy<1> (Mcompar_num_cmp_gt0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_num_cmp_gt0000_cy<2> (Mcompar_num_cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_num_cmp_gt0000_cy<3> (Mcompar_num_cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_num_cmp_gt0000_cy<4> (Mcompar_num_cmp_gt0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_num_cmp_gt0000_cy<5> (Mcompar_num_cmp_gt0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_num_cmp_gt0000_cy<6> (Mcompar_num_cmp_gt0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_num_cmp_gt0000_cy<7> (Mcompar_num_cmp_gt0000_cy<7>)
+     MUXCY:CI->O          97   0.269   1.283  Mcompar_num_cmp_gt0000_cy<8> (Mcompar_num_cmp_gt0000_cy<8>)
+     INV:I->O              1   0.648   0.563  Mcompar_num_cmp_gt0000_cy<8>_inv_INV_0 (num_cmp_gt0000)
+     LUT3:I0->O           78   0.648   1.420  num_mux0000<31>1 (num_mux0000<31>)
+     LUT3:I0->O            2   0.648   0.447  num_mux0001<0>1 (Abs_A_1_OBUF)
+     INV:I->O              1   0.648   0.420  Madd_num_not0001<0>1_INV_0 (Madd_num_not0001<0>)
+     INV:I->O              1   0.648   0.000  Madd_num_add0001_lut<0>_INV_0 (Madd_num_add0001_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  Madd_num_add0001_cy<0> (Madd_num_add0001_cy<0>)
+     XORCY:CI->O           1   0.844   0.420  Madd_num_add0001_xor<1> (num_add0001<1>)
+     INV:I->O              1   0.648   0.420  num_not0008<0>1_INV_0 (num_not0008<0>)
+     INV:I->O              1   0.648   0.000  Madd_num_addsub0002_lut<0>_INV_0 (Madd_num_addsub0002_lut<0>)
+     XORCY:LI->O           1   0.720   0.000  Madd_num_addsub0002_xor<0> (num_addsub0002<0>)
+     MUXF5:I1->O           2   0.276   0.447  num_mux0002<0>_f5 (Abs_A_2_OBUF)
+     INV:I->O              1   0.648   0.420  Madd_num_not0002<0>1_INV_0 (Madd_num_not0002<0>)
+     INV:I->O              1   0.648   0.000  Madd_num_add0002_lut<0>_INV_0 (Madd_num_add0002_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  Madd_num_add0002_cy<0> (Madd_num_add0002_cy<0>)
+     XORCY:CI->O           1   0.844   0.420  Madd_num_add0002_xor<1> (num_add0002<1>)
+     INV:I->O              1   0.648   0.420  num_not0009<0>1_INV_0 (num_not0009<0>)
+     INV:I->O              1   0.648   0.000  Madd_num_addsub0003_lut<0>_INV_0 (Madd_num_addsub0003_lut<0>)
+     XORCY:LI->O           1   0.720   0.423  Madd_num_addsub0003_xor<0> (num_addsub0003<0>)
+     LUT4:I3->O            2   0.648   0.447  num_mux0003<0>40 (Abs_A_3_OBUF)
+     INV:I->O              1   0.648   0.420  Madd_num_not0003<0>1_INV_0 (Madd_num_not0003<0>)
+     INV:I->O              1   0.648   0.000  Madd_num_add0003_lut<0>_INV_0 (Madd_num_add0003_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  Madd_num_add0003_cy<0> (Madd_num_add0003_cy<0>)
+     XORCY:CI->O           1   0.844   0.420  Madd_num_add0003_xor<1> (num_add0003<1>)
+     INV:I->O              1   0.648   0.420  num_not0010<0>1_INV_0 (num_not0010<0>)
+     INV:I->O              1   0.648   0.000  Madd_num_addsub0004_lut<0>_INV_0 (Madd_num_addsub0004_lut<0>)
+     XORCY:LI->O           1   0.720   0.423  Madd_num_addsub0004_xor<0> (num_addsub0004<0>)
+     LUT4:I3->O            2   0.648   0.447  num_mux0004<0>40 (Abs_A_4_OBUF)
+     INV:I->O              1   0.648   0.420  Madd_num_not0004<0>1_INV_0 (Madd_num_not0004<0>)
+     INV:I->O              1   0.648   0.000  Madd_num_add0004_lut<0>_INV_0 (Madd_num_add0004_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  Madd_num_add0004_cy<0> (Madd_num_add0004_cy<0>)
+     XORCY:CI->O           1   0.844   0.420  Madd_num_add0004_xor<1> (num_add0004<1>)
+     INV:I->O              1   0.648   0.420  num_not0011<0>1_INV_0 (num_not0011<0>)
+     INV:I->O              1   0.648   0.000  Madd_num_addsub0005_lut<0>_INV_0 (Madd_num_addsub0005_lut<0>)
+     XORCY:LI->O           1   0.720   0.423  Madd_num_addsub0005_xor<0> (num_addsub0005<0>)
+     LUT4:I3->O            2   0.648   0.447  num_mux0005<0>40 (Abs_A_5_OBUF)
+     INV:I->O              1   0.648   0.420  Madd_num_not0005<0>1_INV_0 (Madd_num_not0005<0>)
+     INV:I->O              1   0.648   0.000  Madd_num_add0005_lut<0>_INV_0 (Madd_num_add0005_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  Madd_num_add0005_cy<0> (Madd_num_add0005_cy<0>)
+     XORCY:CI->O           1   0.844   0.420  Madd_num_add0005_xor<1> (num_add0005<1>)
+     INV:I->O              1   0.648   0.420  num_not0012<0>1_INV_0 (num_not0012<0>)
+     INV:I->O              1   0.648   0.000  Madd_num_addsub0006_lut<0>_INV_0 (Madd_num_addsub0006_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  Madd_num_addsub0006_cy<0> (Madd_num_addsub0006_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<1> (Madd_num_addsub0006_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<2> (Madd_num_addsub0006_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<3> (Madd_num_addsub0006_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<4> (Madd_num_addsub0006_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<5> (Madd_num_addsub0006_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<6> (Madd_num_addsub0006_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<7> (Madd_num_addsub0006_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<8> (Madd_num_addsub0006_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<9> (Madd_num_addsub0006_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<10> (Madd_num_addsub0006_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<11> (Madd_num_addsub0006_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<12> (Madd_num_addsub0006_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<13> (Madd_num_addsub0006_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<14> (Madd_num_addsub0006_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<15> (Madd_num_addsub0006_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<16> (Madd_num_addsub0006_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<17> (Madd_num_addsub0006_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<18> (Madd_num_addsub0006_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<19> (Madd_num_addsub0006_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<20> (Madd_num_addsub0006_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<21> (Madd_num_addsub0006_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<22> (Madd_num_addsub0006_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<23> (Madd_num_addsub0006_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<24> (Madd_num_addsub0006_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<25> (Madd_num_addsub0006_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<26> (Madd_num_addsub0006_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<27> (Madd_num_addsub0006_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<28> (Madd_num_addsub0006_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_num_addsub0006_cy<29> (Madd_num_addsub0006_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  Madd_num_addsub0006_cy<30> (Madd_num_addsub0006_cy<30>)
+     XORCY:CI->O           1   0.844   0.420  Madd_num_addsub0006_xor<31> (num_addsub0006<31>)
+     MUXF5:S->O            1   0.756   0.423  num_mux0007<0>59_SW0_f5 (N228)
+     LUT4:I3->O            1   0.648   0.420  num_mux0007<0>59 (Abs_A_7_OBUF)
+     OBUF:I->O                 4.520          Abs_A_7_OBUF (Abs_A<7>)
+    ----------------------------------------
+    Total                    163.872ns (111.900ns logic, 51.972ns route)
+                                       (68.3% logic, 31.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.54 secs
+ 
+--> 
+
+Total memory usage is 4566740 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

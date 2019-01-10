@@ -1,0 +1,315 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'top'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3sd1800a-fg676-4 -cm area -ir off -pr
+off -c 100 -o top_map.ncd top.ngd top.pcf 
+Target Device  : xc3sd1800a
+Target Package : fg676
+Target Speed   : -4
+Mapper Version : spartan3adsp -- $Revision: 1.55 $
+Mapped Date    : Mon Jan 07 03:28:42 2019
+
+Design Summary
+--------------
+Number of errors   :   1
+Number of warnings :   1
+
+Section 1 - Errors
+------------------
+ERROR:Pack:198 - NCD was not produced.  All logic was removed from the design. 
+   This is usually due to having no input or output PAD connections in the
+   design and no nets or symbols marked as 'SAVE'.  You can either add PADs or
+   'SAVE' attributes to the design, or run 'map -u' to disable logic trimming in
+   the mapper.  For more information on trimming issues search the Xilinx
+   Answers database for "ERROR:Pack:198" and read the Master Answer Record for
+   MAP Trimming Issues.
+
+Section 2 - Warnings
+--------------------
+WARNING:MapLib:701 - Signal Clk connected to top level port Clk has been
+   removed.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network your_instance_name/douta<7> has no load.
+INFO:LIT:395 - The above info message is repeated 7 more times for the following
+   (max. 5 shown):
+   your_instance_name/douta<6>,
+   your_instance_name/douta<5>,
+   your_instance_name/douta<4>,
+   your_instance_name/douta<3>,
+   your_instance_name/douta<2>
+   To see the details of these info messages, please use the -detail switch.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 117 block(s) removed
+ 124 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "Clk_BUFGP/IBUFG" is sourceless and has been removed.
+ Sourceless block "Clk_BUFGP/BUFG" (CKBUF) removed.
+  The signal "Clk_BUFGP" is sourceless and has been removed.
+   Sourceless block "i_0" (FF) removed.
+    The signal "i<0>" is sourceless and has been removed.
+     Sourceless block "dina_0" (FF) removed.
+      The signal "dina<0>" is sourceless and has been removed.
+     Sourceless block "addra_mux0001<9>_SW0" (ROM) removed.
+      The signal "N10" is sourceless and has been removed.
+       Sourceless block "addra_0" (SFF) removed.
+        The signal "addra<0>" is sourceless and has been removed.
+         Sourceless block "addra_mux0001<9>1" (ROM) removed.
+          The signal "addra_mux0001<9>1" is sourceless and has been removed.
+     Sourceless block "Msub_i_share0000_cy<0>_rt" (ROM) removed.
+      The signal "Msub_i_share0000_cy<0>_rt" is sourceless and has been removed.
+       Sourceless block "Msub_i_share0000_cy<0>" (MUX) removed.
+        The signal "Msub_i_share0000_cy<0>" is sourceless and has been removed.
+         Sourceless block "Msub_i_share0000_cy<1>" (MUX) removed.
+          The signal "Msub_i_share0000_cy<1>" is sourceless and has been removed.
+           Sourceless block "Msub_i_share0000_cy<2>" (MUX) removed.
+            The signal "Msub_i_share0000_cy<2>" is sourceless and has been removed.
+             Sourceless block "Msub_i_share0000_cy<3>" (MUX) removed.
+              The signal "Msub_i_share0000_cy<3>" is sourceless and has been removed.
+               Sourceless block "Msub_i_share0000_cy<4>" (MUX) removed.
+                The signal "Msub_i_share0000_cy<4>" is sourceless and has been removed.
+                 Sourceless block "Msub_i_share0000_cy<5>" (MUX) removed.
+                  The signal "Msub_i_share0000_cy<5>" is sourceless and has been removed.
+                   Sourceless block "Msub_i_share0000_cy<6>" (MUX) removed.
+                    The signal "Msub_i_share0000_cy<6>" is sourceless and has been removed.
+                     Sourceless block "Msub_i_share0000_cy<7>" (MUX) removed.
+                      The signal "Msub_i_share0000_cy<7>" is sourceless and has been removed.
+                       Sourceless block "Msub_i_share0000_cy<8>" (MUX) removed.
+                        The signal "Msub_i_share0000_cy<8>" is sourceless and has been removed.
+                         Sourceless block "Msub_i_share0000_xor<9>" (XOR) removed.
+                          The signal "i_share0000<9>" is sourceless and has been removed.
+                           Sourceless block "i_mux0001<0>12" (ROM) removed.
+                            The signal "i_mux0001<0>1" is sourceless and has been removed.
+                             Sourceless block "i_9" (FF) removed.
+                              The signal "i<9>" is sourceless and has been removed.
+                               Sourceless block "addra_mux0001<0>_SW0" (ROM) removed.
+                                The signal "N30" is sourceless and has been removed.
+                                 Sourceless block "addra_9" (SFF) removed.
+                                  The signal "addra<9>" is sourceless and has been removed.
+                                   Sourceless block "addra_mux0001<0>1" (ROM) removed.
+                                    The signal "addra_mux0001<0>1" is sourceless and has been removed.
+                               Sourceless block "Msub_i_share0000_lut<9>_INV_0" (BUF) removed.
+                                The signal "Msub_i_share0000_lut<9>" is sourceless and has been removed.
+                               Sourceless block "state_cmp_eq000036" (ROM) removed.
+                                The signal "state_cmp_eq000036" is sourceless and has been removed.
+                                 Sourceless block "state_cmp_eq000038" (ROM) removed.
+                                  The signal "state_cmp_eq0000" is sourceless and has been removed.
+                                   Sourceless block "i_mux0001<9>" (ROM) removed.
+                                    The signal "i_mux0001<9>" is sourceless and has been removed.
+                                   Sourceless block "i_mux0001<8>11" (ROM) removed.
+                                    The signal "i_mux0001<8>1" is sourceless and has been removed.
+                                     Sourceless block "i_1" (FF) removed.
+                                      The signal "i<1>" is sourceless and has been removed.
+                                       Sourceless block "dina_1" (FF) removed.
+                                        The signal "dina<1>" is sourceless and has been removed.
+                                       Sourceless block "addra_mux0001<8>_SW0" (ROM) removed.
+                                        The signal "N32" is sourceless and has been removed.
+                                         Sourceless block "addra_1" (SFF) removed.
+                                          The signal "addra<1>" is sourceless and has been removed.
+                                           Sourceless block "addra_mux0001<8>1" (ROM) removed.
+                                            The signal "addra_mux0001<8>1" is sourceless and has been removed.
+                                       Sourceless block "Msub_i_share0000_lut<1>_INV_0" (BUF) removed.
+                                        The signal "Msub_i_share0000_lut<1>" is sourceless and has been removed.
+                                         Sourceless block "Msub_i_share0000_xor<1>" (XOR) removed.
+                                          The signal "i_share0000<1>" is sourceless and has been removed.
+                                       Sourceless block "state_cmp_eq000011" (ROM) removed.
+                                        The signal "state_cmp_eq000011" is sourceless and has been removed.
+                                   Sourceless block "i_mux0001<7>11" (ROM) removed.
+                                    The signal "i_mux0001<7>1" is sourceless and has been removed.
+                                     Sourceless block "i_2" (FF) removed.
+                                      The signal "i<2>" is sourceless and has been removed.
+                                       Sourceless block "dina_2" (FF) removed.
+                                        The signal "dina<2>" is sourceless and has been removed.
+                                       Sourceless block "addra_mux0001<7>1" (ROM) removed.
+                                        The signal "addra_mux0001<7>1" is sourceless and has been removed.
+                                         Sourceless block "addra_2" (SFF) removed.
+                                          The signal "addra<2>" is sourceless and has been removed.
+                                           Sourceless block "addra_mux0001<7>_SW0" (ROM) removed.
+                                            The signal "N16" is sourceless and has been removed.
+                                       Sourceless block "Msub_i_share0000_lut<2>_INV_0" (BUF) removed.
+                                        The signal "Msub_i_share0000_lut<2>" is sourceless and has been removed.
+                                         Sourceless block "Msub_i_share0000_xor<2>" (XOR) removed.
+                                          The signal "i_share0000<2>" is sourceless and has been removed.
+                                   Sourceless block "i_mux0001<6>11" (ROM) removed.
+                                    The signal "i_mux0001<6>1" is sourceless and has been removed.
+                                     Sourceless block "i_3" (FF) removed.
+                                      The signal "i<3>" is sourceless and has been removed.
+                                       Sourceless block "dina_3" (FF) removed.
+                                        The signal "dina<3>" is sourceless and has been removed.
+                                       Sourceless block "addra_mux0001<6>1" (ROM) removed.
+                                        The signal "addra_mux0001<6>1" is sourceless and has been removed.
+                                         Sourceless block "addra_3" (SFF) removed.
+                                          The signal "addra<3>" is sourceless and has been removed.
+                                           Sourceless block "addra_mux0001<6>_SW0" (ROM) removed.
+                                            The signal "N18" is sourceless and has been removed.
+                                       Sourceless block "Msub_i_share0000_lut<3>_INV_0" (BUF) removed.
+                                        The signal "Msub_i_share0000_lut<3>" is sourceless and has been removed.
+                                         Sourceless block "Msub_i_share0000_xor<3>" (XOR) removed.
+                                          The signal "i_share0000<3>" is sourceless and has been removed.
+                                   Sourceless block "i_mux0001<5>11" (ROM) removed.
+                                    The signal "i_mux0001<5>1" is sourceless and has been removed.
+                                     Sourceless block "i_4" (FF) removed.
+                                      The signal "i<4>" is sourceless and has been removed.
+                                       Sourceless block "dina_4" (FF) removed.
+                                        The signal "dina<4>" is sourceless and has been removed.
+                                       Sourceless block "addra_mux0001<5>1" (ROM) removed.
+                                        The signal "addra_mux0001<5>1" is sourceless and has been removed.
+                                         Sourceless block "addra_4" (SFF) removed.
+                                          The signal "addra<4>" is sourceless and has been removed.
+                                           Sourceless block "addra_mux0001<5>_SW0" (ROM) removed.
+                                            The signal "N20" is sourceless and has been removed.
+                                       Sourceless block "Msub_i_share0000_lut<4>_INV_0" (BUF) removed.
+                                        The signal "Msub_i_share0000_lut<4>" is sourceless and has been removed.
+                                         Sourceless block "Msub_i_share0000_xor<4>" (XOR) removed.
+                                          The signal "i_share0000<4>" is sourceless and has been removed.
+                                   Sourceless block "i_mux0001<4>11" (ROM) removed.
+                                    The signal "i_mux0001<4>1" is sourceless and has been removed.
+                                     Sourceless block "i_5" (FF) removed.
+                                      The signal "i<5>" is sourceless and has been removed.
+                                       Sourceless block "dina_5" (FF) removed.
+                                        The signal "dina<5>" is sourceless and has been removed.
+                                       Sourceless block "addra_mux0001<4>1" (ROM) removed.
+                                        The signal "addra_mux0001<4>1" is sourceless and has been removed.
+                                         Sourceless block "addra_5" (SFF) removed.
+                                          The signal "addra<5>" is sourceless and has been removed.
+                                           Sourceless block "addra_mux0001<4>_SW0" (ROM) removed.
+                                            The signal "N22" is sourceless and has been removed.
+                                       Sourceless block "Msub_i_share0000_lut<5>_INV_0" (BUF) removed.
+                                        The signal "Msub_i_share0000_lut<5>" is sourceless and has been removed.
+                                         Sourceless block "Msub_i_share0000_xor<5>" (XOR) removed.
+                                          The signal "i_share0000<5>" is sourceless and has been removed.
+                                   Sourceless block "i_mux0001<3>11" (ROM) removed.
+                                    The signal "i_mux0001<3>1" is sourceless and has been removed.
+                                     Sourceless block "i_6" (FF) removed.
+                                      The signal "i<6>" is sourceless and has been removed.
+                                       Sourceless block "dina_6" (FF) removed.
+                                        The signal "dina<6>" is sourceless and has been removed.
+                                       Sourceless block "addra_mux0001<3>1" (ROM) removed.
+                                        The signal "addra_mux0001<3>1" is sourceless and has been removed.
+                                         Sourceless block "addra_6" (SFF) removed.
+                                          The signal "addra<6>" is sourceless and has been removed.
+                                           Sourceless block "addra_mux0001<3>_SW0" (ROM) removed.
+                                            The signal "N24" is sourceless and has been removed.
+                                       Sourceless block "Msub_i_share0000_lut<6>_INV_0" (BUF) removed.
+                                        The signal "Msub_i_share0000_lut<6>" is sourceless and has been removed.
+                                         Sourceless block "Msub_i_share0000_xor<6>" (XOR) removed.
+                                          The signal "i_share0000<6>" is sourceless and has been removed.
+                                   Sourceless block "i_mux0001<2>11" (ROM) removed.
+                                    The signal "i_mux0001<2>1" is sourceless and has been removed.
+                                     Sourceless block "i_7" (FF) removed.
+                                      The signal "i<7>" is sourceless and has been removed.
+                                       Sourceless block "dina_7" (FF) removed.
+                                        The signal "dina<7>" is sourceless and has been removed.
+                                       Sourceless block "addra_mux0001<2>1" (ROM) removed.
+                                        The signal "addra_mux0001<2>1" is sourceless and has been removed.
+                                         Sourceless block "addra_7" (SFF) removed.
+                                          The signal "addra<7>" is sourceless and has been removed.
+                                           Sourceless block "addra_mux0001<2>_SW0" (ROM) removed.
+                                            The signal "N26" is sourceless and has been removed.
+                                       Sourceless block "Msub_i_share0000_lut<7>_INV_0" (BUF) removed.
+                                        The signal "Msub_i_share0000_lut<7>" is sourceless and has been removed.
+                                         Sourceless block "Msub_i_share0000_xor<7>" (XOR) removed.
+                                          The signal "i_share0000<7>" is sourceless and has been removed.
+                                   Sourceless block "state_FSM_FFd9" (FF) removed.
+                                    The signal "state_FSM_FFd9" is sourceless and has been removed.
+                                     Sourceless block "i_mux0001<0>11" (ROM) removed.
+                                      The signal "N01" is sourceless and has been removed.
+                                       Sourceless block "i_8" (FF) removed.
+                                        The signal "i<8>" is sourceless and has been removed.
+                                         Sourceless block "addra_mux0001<1>_SW0" (ROM) removed.
+                                          The signal "N28" is sourceless and has been removed.
+                                           Sourceless block "addra_8" (SFF) removed.
+                                            The signal "addra<8>" is sourceless and has been removed.
+                                             Sourceless block "addra_mux0001<1>1" (ROM) removed.
+                                              The signal "addra_mux0001<1>1" is sourceless and has been removed.
+                                         Sourceless block "Msub_i_share0000_lut<8>_INV_0" (BUF) removed.
+                                          The signal "Msub_i_share0000_lut<8>" is sourceless and has been removed.
+                                           Sourceless block "Msub_i_share0000_xor<8>" (XOR) removed.
+                                            The signal "i_share0000<8>" is sourceless and has been removed.
+                                             Sourceless block "i_mux0001<1>11" (ROM) removed.
+                                              The signal "i_mux0001<1>1" is sourceless and has been removed.
+                                     Sourceless block "state_FSM_FFd8-In1" (ROM) removed.
+                                      The signal "state_FSM_FFd8-In" is sourceless and has been removed.
+                                       Sourceless block "state_FSM_FFd8" (FF) removed.
+                                        The signal "state_FSM_FFd8" is sourceless and has been removed.
+                                     Sourceless block "addra_or0000" (ROM) removed.
+                                      The signal "addra_or0000" is sourceless and has been removed.
+                                     Sourceless block "state_FSM_FFd9-In1" (ROM) removed.
+                                      The signal "state_FSM_FFd9-In" is sourceless and has been removed.
+                                       Sourceless block "wea_0" (SFF) removed.
+                                        The signal "wea<0>" is sourceless and has been removed.
+                                         Sourceless block "wea_0_mux0000_SW0" (ROM) removed.
+                                          The signal "wea_0_mux0000_SW0/O" is sourceless and has been removed.
+                                     Sourceless block "i_mux0001<9>_SW0" (ROM) removed.
+                                      The signal "i_mux0001<9>_SW0/O" is sourceless and has been removed.
+                                   Sourceless block "state_FSM_FFd7-In1" (ROM) removed.
+                                    The signal "state_FSM_FFd7-In" is sourceless and has been removed.
+                                     Sourceless block "state_FSM_FFd7" (FF) removed.
+                                      The signal "state_FSM_FFd7" is sourceless and has been removed.
+                                       Sourceless block "state_FSM_FFd3" (FF) removed.
+                                        The signal "state_FSM_FFd3" is sourceless and has been removed.
+                                         Sourceless block "state_FSM_FFd4" (FF) removed.
+                                          The signal "state_FSM_FFd4" is sourceless and has been removed.
+                                           Sourceless block "state_FSM_FFd2" (FF) removed.
+                                            The signal "state_FSM_FFd2" is sourceless and has been removed.
+                                             Sourceless block "wea_0_mux00001" (ROM) removed.
+                                              The signal "wea_0_mux00001" is sourceless and has been removed.
+                                         Sourceless block "addra_or0000_SW0" (ROM) removed.
+                                          The signal "addra_or0000_SW0/O" is sourceless and has been removed.
+       Sourceless block "Msub_i_share0000_xor<0>" (XOR) removed.
+        The signal "i_share0000<0>" is sourceless and has been removed.
+   Sourceless block "state_FSM_FFd6" (FF) removed.
+    The signal "state_FSM_FFd6" is sourceless and has been removed.
+The signal "Mshreg_state_FSM_FFd6/CE" is sourceless and has been removed.
+The signal "your_instance_name/douta<7>" is sourceless and has been removed.
+The signal "your_instance_name/douta<6>" is sourceless and has been removed.
+The signal "your_instance_name/douta<5>" is sourceless and has been removed.
+The signal "your_instance_name/douta<4>" is sourceless and has been removed.
+The signal "your_instance_name/douta<3>" is sourceless and has been removed.
+The signal "your_instance_name/douta<2>" is sourceless and has been removed.
+The signal "your_instance_name/douta<1>" is sourceless and has been removed.
+The signal "your_instance_name/douta<0>" is sourceless and has been removed.
+The signal "your_instance_name/N0" is sourceless and has been removed.
+The signal "your_instance_name/N1" is sourceless and has been removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "Clk" is unused and has been removed.
+ Unused block "Clk" (PAD) removed.
+The signal "Mshreg_state_FSM_FFd6" is unused and has been removed.
+The signal "N0" is unused and has been removed.
+ Unused block "XST_GND" (ZERO) removed.
+The signal "N1" is unused and has been removed.
+ Unused block "XST_VCC" (ONE) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[0].ram.r/s3adsp_noinit.ram/dpram.ram" (RAMB16BWER) removed.
+Unused block "Mshreg_state_FSM_FFd6/SRL16E" (SRLC16E) removed.
+Unused block "Mshreg_state_FSM_FFd6/VCC" (ONE) removed.
+Unused block "your_instance_name/XST_GND" (ZERO) removed.
+Unused block "your_instance_name/XST_VCC" (ONE) removed.
+Unused block "Clk_BUFGP/IBUFG" (CKBUF) removed.
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.

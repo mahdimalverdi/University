@@ -1,0 +1,27 @@
+xst -intstyle ise -ifn "D:/University/13971/SD/E5/MY_abs.xst" -ofn "D:/University/13971/SD/E5/MY_abs.syr" 
+xst -intstyle ise -ifn "D:/University/13971/SD/E5/MY_abs.xst" -ofn "D:/University/13971/SD/E5/MY_abs.syr" 
+xst -intstyle ise -ifn "D:/University/13971/SD/E5/MY_abs.xst" -ofn "D:/University/13971/SD/E5/MY_abs.syr" 
+xst -intstyle ise -ifn "D:/University/13971/SD/E5/MY_abs.xst" -ofn "D:/University/13971/SD/E5/MY_abs.syr" 
+xst -intstyle ise -ifn "D:/University/13971/SD/E5/MY_abs.xst" -ofn "D:/University/13971/SD/E5/MY_abs.syr" 
+xst -intstyle ise -ifn "D:/University/13971/SD/E5/MY_abs.xst" -ofn "D:/University/13971/SD/E5/MY_abs.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3sd1800a-fg676-4 MY_abs.ngc MY_abs.ngd  
+map -intstyle ise -p xc3sd1800a-fg676-4 -cm area -ir off -pr off -c 100 -o MY_abs_map.ncd MY_abs.ngd MY_abs.pcf 
+par -w -intstyle ise -ol high -t 1 MY_abs_map.ncd MY_abs.ncd MY_abs.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml MY_abs.twx MY_abs.ncd -o MY_abs.twr MY_abs.pcf 
+xst -intstyle ise -ifn "D:/University/13971/SD/E5/MY_abs.xst" -ofn "D:/University/13971/SD/E5/MY_abs.syr" 
+xst -intstyle ise -ifn "D:/University/13971/SD/E5/MY_abs.xst" -ofn "D:/University/13971/SD/E5/MY_abs.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3sd1800a-fg676-4 MY_abs.ngc MY_abs.ngd  
+map -intstyle ise -p xc3sd1800a-fg676-4 -cm area -ir off -pr off -c 100 -o MY_abs_map.ncd MY_abs.ngd MY_abs.pcf 
+par -w -intstyle ise -ol high -t 1 MY_abs_map.ncd MY_abs.ncd MY_abs.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml MY_abs.twx MY_abs.ncd -o MY_abs.twr MY_abs.pcf 
+xst -intstyle ise -ifn "D:/University/13971/SD/E5/MY_abs.xst" -ofn "D:/University/13971/SD/E5/MY_abs.syr" 
+xst -intstyle ise -ifn "D:/University/13971/SD/E5/MY_abs.xst" -ofn "D:/University/13971/SD/E5/MY_abs.syr" 
+xst -intstyle ise -ifn "D:/University/13971/SD/E5/MY_abs.xst" -ofn "D:/University/13971/SD/E5/MY_abs.syr" 
+xst -intstyle ise -ifn "D:/University/13971/SD/E5/MY_abs.xst" -ofn "D:/University/13971/SD/E5/MY_abs.syr" 
+xst -intstyle ise -ifn "D:/University/13971/SD/E5/MY_abs.xst" -ofn "D:/University/13971/SD/E5/MY_abs.syr" 
+xst -intstyle ise -ifn "D:/University/13971/SD/E5/MY_abs.xst" -ofn "D:/University/13971/SD/E5/MY_abs.syr" 
+xst -intstyle ise -ifn "D:/University/13971/SD/E5/MY_abs.xst" -ofn "D:/University/13971/SD/E5/MY_abs.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3sd1800a-fg676-4 MY_abs.ngc MY_abs.ngd  
+map -intstyle ise -p xc3sd1800a-fg676-4 -cm area -ir off -pr off -c 100 -o MY_abs_map.ncd MY_abs.ngd MY_abs.pcf 
+par -w -intstyle ise -ol high -t 1 MY_abs_map.ncd MY_abs.ncd MY_abs.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml MY_abs.twx MY_abs.ncd -o MY_abs.twr MY_abs.pcf 

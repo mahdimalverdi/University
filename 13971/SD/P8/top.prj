@@ -1,0 +1,2 @@
+vhdl work "ipcore_dir/BlockRam.vhd"
+vhdl work "top.vhd"

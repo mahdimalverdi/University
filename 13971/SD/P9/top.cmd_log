@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "D:/University/13971/SD/P8/top.xst" -ofn "D:/University/13971/SD/P8/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc3sd1800a-fg676-4 top.ngc top.ngd  
+map -intstyle ise -p xc3sd1800a-fg676-4 -cm area -ir off -pr off -c 100 -o top_map.ncd top.ngd top.pcf 

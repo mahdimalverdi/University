@@ -1,0 +1,2 @@
+vhdl isim_temp "SSD_Driver.vhd"
+vhdl isim_temp "SSD_Driver_Bench.vhd"

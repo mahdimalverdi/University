@@ -1,0 +1,4 @@
+vhdl work "SSD_Driver.vhd"
+vhdl work "Counter.vhd"
+vhdl work "Top.vhd"
+vhdl work "Top_Bench.vhd"

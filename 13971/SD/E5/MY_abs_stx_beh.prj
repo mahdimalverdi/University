@@ -1,0 +1,2 @@
+vhdl isim_temp "my_pakage.vhd"
+vhdl isim_temp "MY_abs.vhd"

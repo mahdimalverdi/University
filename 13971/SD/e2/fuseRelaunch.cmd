@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "D:/University/13971/SD/e2/top_testBench_isim_beh.exe" -prj "D:/University/13971/SD/e2/top_testBench_beh.prj" "work.top_testBench" 
